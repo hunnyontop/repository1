@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color:  #0A0A0A;
+
+        }
+
+        .navbar {
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+            padding: 15px;
+            color: #000000a4;
+            height: 1600px;
+            position: fixed;
+            width: 1500px;
+        }
+
+        .logo {
+            color: #FFFFFF;
+            width: 200px;
+            margin-left: 80px;
+            margin-top: 40px;
+            width: 200px;
+            font-weight: bold;
+
+        }
+
+        .h1 {
+
+            text-align: center;
+            margin: 50px;
+        }
+
+        .heading {
+            text-align: center;
+            margin-top: 100px;
+            font-size: x-large;
+            padding: 30px;
+            color: #FFFFFF;
+        }
+
+        .parent {
+            grid-template-columns: repeat(12, calc(100%/12));
+            display: grid;
+            height: 600px;
+            width: 1200px;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 100px;
+            margin-left: 170px;
+        }
+
+        .child {
+            background-color: rgb(203, 184, 237);
+            border-radius: 10px;
+            background-size: cover;
+            object-fit: cover;
+            transition: all 400ms linear;
+            filter: saturate(0);
+        }
+
+        .col-span-4 {
+            grid-column: span 4/ span 4;
+        }
+
+        .col-span-2 {
+            grid-column: span 2/ span 2;
+        }
+
+        .row-span-2 {
+            grid-row: span 2/ span 2;
+        }
+
+        .col-span-3 {
+            grid-column: span 3/ span 3;
+        }
+
+        .child:hover {
+            filter: saturate(1);
+        }
+
+        .img1 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdP4Q7rc3genngGqBxSbkfO7Ptx5HlOjK0f7y2maOhrA&s=10);
+            background-position: center;
+        }
+
+        .img2 {
+            background-image: url(https://zimsonwatches.com/cdn/shop/articles/elegant-two-tone-wristwatch-visible-skeleton-movement-ceramic-bracelet-links_94543c33-a249-4413-9970-cdb80dc60c52.webp?v=1783065014&width=1100);
+            background-position: center;
+        }
+
+        .img3 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHY5wWGFshDY7LTE-UARyVVuZgm5beqZJkFaRxPlfIhw&s=10);
+            background-position: center;
+        }
+
+        .img4 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxkqhb6eudiDDePAwwLTHEPY897ckXldQtf7zM5RNb8g&s=10);
+            background-position: center;
+        }
+
+        .img5 {
+            background-image: url(https://watchesworld.com/wp-content/uploads/2023/08/Omega-Seamaster-300m-Chronograph-1.jpg);
+            background-position: center;
+        }
+
+        .img6 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpmUpgBZWWY4WzVcsMC0xs31Zn_5XGdPN1gQh8O4ayqg&s=10);
+            background-position: center;
+        }
+
+        .img7 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz9L-gZfyylEviHQvnz_Y7fV3EQQrG_GeHROTYy7Fgyg&s=10);
+            background-position: center;
+        }
+
+        .img8 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw-0YzU1HWhwZtbc81UREZqiwAYT7AHN51xS7dywyJb-AC-c9LNY3hi5E&s=10);
+            background-position: center;
+        }
+
+        .img9 {
+            background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-ijJ4fNfpmgoGd3So8b22t8Ou8wLntltQdn773tTvtYRVYD5ciej0ZDHw&s=10);
+            background-position: center;
+        }
+
+        .img10 {
+            background-image: url(https://mygemma.com/cdn/shop/articles/WPD-Top-Blog-Image-2022-08-24T171131.838.png?v=1695912610&width=1200);
+            background-position: center;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 165px;
+            margin-top: 120px;
+            margin-left: 330px;
+        }
+
+        .button-container button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            background-color: rgb(190, 39, 198);
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .button-container button:hover {
+            background-color: rgba(58, 58, 58, 0.778);
+            transition: all 400ms linear;
+        }
+
+        .below-text {
+            width: 500px;
+            margin-top: 100px;
+            text-align: center;
+            font-size: 16px;
+            line-height: 1.6;
+            color: #FFFFFF;
+            margin-left: 160px;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 55px;
+        }
+
+        .skills span {
+            background-color: rgb(48, 46, 46);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .skills span:hover {
+            transform: translateY(-3px);
+            background-color: #4f46e5;
+        }
+        .skill-heading{
+            width: 500px;
+            margin-top: 100px;
+            text-align: center;
+            font-size: 30px;
+            line-height: 1.6;
+            color: #FFFFFF;
+            margin-left: 510px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            
+        }
+        .bg-image {
+    position: absolute;
+    top: 50px;
+    right: -100px;
+    width: 400px;
+    height: 400px;
+    background-image: url();
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+    </style>
+</head>
+
+<body>
+    <div class="nav-bar">
+        <div class="logo"> LOGO </div>
+
+
+    </div>
+    <div class="heading">
+        <h1><br> Turning Ideas <br> Into Interactive Web Experience <br>
+        </h1>
+        <h2><span>Here Is My Work Below. </span> </h2>
+    </div>
+    <div class="parent">
+        <div class="child col-span-4 img1"></div>
+        <div class="child col-span-4 img2"></div>
+        <div class="child col-span-2 row-span-2 img3"></div>
+        <div class="child col-span-2 img4"></div>
+        <div class="child col-span-4 row-span-2 img5"></div>
+        <div class="child col-span-3 row-span-2 img6"></div>
+        <div class="child img7"></div>
+        <div class="child col-span-2 img8"></div>
+        <div class="child col-span-3 img9"></div>
+        <div class="child col-span-2 img10"></div>
+
+    </div>
+    <div class="button-container">
+        <button>Instagram</button>
+        <button>facebook</button>
+        <button>whatsapp</button>
+        <button>linked in</button>
+    </div>
+    <p class="below-text">I'm a passionate web developer with a strong interest in creating clean, responsive,
+        and user-friendly websites. I enjoy turning ideas into interactive digital experiences and paying attention to
+        the small details that make a website both functional and visually appealing. I have experience working with
+        HTML, CSS, and JavaScript, and I continuously explore new technologies to improve my skills and stay updated
+        with modern web development trends.
+
+        I believe that great websites are built through creativity, problem-solving, and continuous learning. Every
+        project I work on gives me an opportunity to challenge myself, learn something new, and deliver better user
+        experiences. My goal is to build innovative and meaningful web applications that not only look great but also
+        provide real value to users while helping me grow as a developer.
+    </p>
+    <p class="skill-heading">Skills That I Have Aquired</p>
+    <div class="skills">
+        <span>🌐 HTML</span>
+        <span>🎨 CSS</span>
+        <span>⚡ JavaScript</span>
+        <span>⚛️ React</span>
+    </div>
+    <div class="bg-image"></div>
+</body>
+
+</html>
