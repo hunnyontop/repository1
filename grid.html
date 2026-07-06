@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .child {
+            background-color: blueviolet;
+            min-height: 100px;
+            min-width: 100px;
+            display: grid;
+
+            border-radius: 10px;
+           
+
+        }
+
+        .parent {
+            display: grid;
+            gap:10px;
+            grid-template-columns: repeat(5,20%);
+        }
+
+        .col-grid-1 {
+            background: white;
+            grid-column: span 1/ span 1;
+        }
+
+        .col-grid-2 {
+
+            grid-column: span 2/span 2;
+
+        }
+
+        .col-grid-3 {
+            grid-column: span 3 / span 3;
+        }
+
+        .col-grid-4 {
+            grid-column: span 4/ span 4;
+        }
+
+        .col-grid-5 {
+            grid-column: span 5/ span 5;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="parent">
+        <div class="child" >1</div>
+        <div class="child col-grid-2" >2</div>
+        <div class="child" >3</div>
+        <div class="child col-grid-4" >4</div>
+        
+
+    </div>
+</body>
+
+</html>
